@@ -22,8 +22,8 @@ R12725040_assignment01/
 ## Environment
 - Operating System: **macOS**
 - Execution Environment: **Conda base environment**
-- Python Version: **3.12**
-- Required Package: **tinydb**
+- Language: **Python** (Python Version: **3.12**)
+- Required Package: **tinydb** (Lightweight database)
 
 ## Build
 ```
