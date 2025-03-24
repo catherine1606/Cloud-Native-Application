@@ -1,6 +1,7 @@
 # CLI Project
 
 ## Project Structure
+``` 
 R12725040_assignment01/
 │── src/
 │   ├── main.py               # Presentation layer
@@ -16,6 +17,7 @@ R12725040_assignment01/
 │── run.sh
 │── README.md
 │── db.json                   # TinyDB
+``` 
 
 ## Environment
 - Operating System: **macOS**
@@ -24,7 +26,11 @@ R12725040_assignment01/
 - Required Package: **tinydb**
 
 ## Build
+```
 ./build.sh
+```
 
 ## Run
+```
 ./run.sh
+```
