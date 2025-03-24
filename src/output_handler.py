@@ -6,15 +6,15 @@ class OutputHandler:
 
     @staticmethod
     def error(message):
-        """ 統一錯誤訊息輸出 """
+        """ 輸出錯誤訊息 """
         print(message, end="\n\n")
 
     @staticmethod
     def listing_details(listing):
         """ 格式化商品資訊輸出 """
-        return f"{listing['title']}|{listing['description']}|{listing['price']}|{listing['creation_time']}|{listing['category']}|{listing['username']}"
+        return f"{listing['title']}|{listing['description']}|{listing['price']}|{listing['creation_time']}|{listing['category']}|{listing['username']}\n"
 
     @staticmethod
     def category_listings(listings):
-        """ 以換行方式輸出所有分類商品 """
-        return "\n".join(OutputHandler.listing_details(l) for l in listings)
+        """ 輸出所有分類商品 """
+        return "".join(OutputHandler.listing_details(l) for l in listings)
