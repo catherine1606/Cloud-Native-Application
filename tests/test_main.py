@@ -17,3 +17,10 @@ def test_create_and_get_listing():
     listing = handle_command("GET_LISTING user1 100001")
     assert listing.startswith("Phone model 8|Black color, brand new|1000|")
     assert "Electronics|user1" in listing
+
+def test_user2_listing_and_get():
+    assert handle_command("CREATE_LISTING user2 'T-shirt' 'White color' 20 'Sports'") == "100003"
+
+    listing = handle_command("GET_LISTING user1 100003")
+    assert listing.startswith("T-shirt|White color|20|")
+    assert "Sports|user2" in listing
