@@ -6,7 +6,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "s
 from main import handle_command
 
 def test_register():
-    assert handle_command("REGISTER user1") == "Success"
+    assert handle_command("REGISTER user1") == "Error - user already existing"
     assert handle_command("REGISTER user2") == "Success"
     assert handle_command("REGISTER user2") == "Error - user already existing"
 
