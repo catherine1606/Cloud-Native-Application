@@ -1,4 +1,4 @@
-# CLI Project
+# Project
 
 ## Project Structure
 ``` 
@@ -13,6 +13,8 @@ R12725040_assignment01/
 │   ├── persistence/          # Persistence layer
 │   │   ├── db_handler.py     # database
 │   ├── output_handler.py     # Presentation layer
+│── tests/
+│   ├── test_main.py
 │── build.sh
 │── run.sh
 │── README.md
