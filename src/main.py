@@ -10,6 +10,32 @@ from src.services.user_service import UserService
 from src.services.listing_service import ListingService
 from src.services.category_service import CategoryService
 
+# for testing purposes
+def handle_command(command: str) -> str:
+    cmd, args = parse_command(command)
+
+    if cmd == "REGISTER":
+        return UserService.register(*args)
+
+    elif cmd == "CREATE_LISTING":
+        return ListingService.create_listing(*args)
+
+    elif cmd == "DELETE_LISTING":
+        return ListingService.delete_listing(*args)
+
+    elif cmd == "GET_LISTING":
+        result = ListingService.get_listing(*args)
+        return OutputHandler.listing_details(result)
+
+    elif cmd == "GET_CATEGORY":
+        result = CategoryService.get_category(*args)
+        return OutputHandler.category_listings(result)
+
+    elif cmd == "GET_TOP_CATEGORY":
+        return CategoryService.get_top_category(*args)
+
+    return "Error - Unknown command"
+
 def main():
     while True:
         try:
